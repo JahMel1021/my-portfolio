@@ -1,0 +1,131 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+/* Color palette */
+:root {
+  --primary: #1e3a5f;
+  --secondary: #3b82f6;
+  --background: #f4f7fb;
+  --text: #263445;
+  --white: #ffffff;
+}
+
+/* General styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 16px;
+  background-color: var(--primary);
+  border-radius: 8px;
+}
+
+nav a {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Main content */
+main {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 12px;
+}
+
+/* Multi-column layout */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  padding: 24px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+/* ID selector */
+#contact {
+  padding: 24px;
+  background-color: #e5efff;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 32px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
